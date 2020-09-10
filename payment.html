@@ -4,61 +4,119 @@
             <title>Train E-ticketing</title>
     </head>
 <style>
- body {
-        background-image:url("railway10.jpg");
+    body {
+        background-image: url("railway10.jpg");
         background-repeat: no-repeat;
-        background-size: 150%;
-        
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Montserrat, sans-serif;
+
     }
-    .navigation_bar
-    {
-        
-        background-color:yellow;
-        border-width: thick;
-        border-bottom-style: ridge;
-        width: inherit;
-        height:50px;
-        overflow: hidden;
-        
+
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: 0;
+        list-style: none;
+        box-sizing: border-box;
+        border-style: none;
+
     }
-    a{
-        text-decoration:none;
-        padding:20px;
-        font-size: 25px;
+
+    nav {
+        background-color: #2f496e;
+        height: 80px;
+        width: 100%;
+        position: fixed;
     }
-    a:hover{
-        color:chartreuse;
-        background-color:darkseagreen;
+
+    label.heading {
+        font-size: 35px;
+        padding: 0 40px;
+        text-transform: uppercase;
+        color: #f4eade;
+        line-height: 80px;
+        font-weight: 700;
     }
-    .active{
-        color:indianred;
-        background-color: aqua;
+
+    nav ul {
+        float: right;
+        margin-right: 20px;
+
     }
-    .registration{
+
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+        list-style: none;
+    }
+
+    a {
+        color: #f4eade;
+        text-decoration: none;
+        padding: 10px 15px;
+        text-transform: uppercase;
+    }
+
+    nav ul li a:active,
+    nav ul li a:hover {
+        background-color: #f4eade;
+        color: #2f496e;
+        transition-duration: 0.5s;
+        border-bottom-width: 5px;
+        border-bottom-color: #2988bc;
+        border-bottom-style: solid;
+        border-right-width: 5px;
+        border-right-color: #2988bc;
+        border-right-style: solid;
+
+    }
+    .login{
         text-align: center;
-        padding: 20px;
+        padding: 80px;
         margin:auto;
         clear:both;
         
     }
     
-    #l{
-        font-size:50px;
-        font-family: cursive;
-        color: red;
+    .f {
+        border-style: none;
+        background-color: #2f496e7a;
+        padding: 30px 0px;
+        margin: 80px 20%;
+        display: flex;
+
     }
-    .f{
-        border-color: aqua;
-        border-width: thick;
-        width:inherit;
-        
-        
+
+    #l {
+        font-size: 50px;
+        color: #f4eade;
+        font-weight: 700;
+        margin-bottom: 20px;
     }
-      .foot{
-        float: right;
-        background-color: aqua;
-        
+    #inp{
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
     }
+    p{
+        font-size: 20px;
+        color: #faf3eb;        
+    }
+    #btn {
+        background-color: #2f496e;
+        color: #f4eade;
+        margin: 20px 45%;
+        padding: 10px 20px;
+    
+    }
+
+    #btn:hover {
+        background-color: #f4eade;
+        color: #2f496e;
+    }
+
     #1{
         float:right;
     }
@@ -68,14 +126,15 @@
     
     </style>
 <body>
-<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href ="cancellation.html"> Cancel Reservation</a>
-    </div>
+    <nav>
+        <label class="heading">Train Ticket Booking</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="TrainStatus.html">Train Status</a></li>
+            <li><a href="mailto:yuvaraj1392002@gmail.com">Contact us</a></li>
+
+        </ul>
+    </nav>
     <div class="login">
         <form action="payment.php" method="post">
               <fieldset class="f"><label id="l"> MAKE PAYMENT</label>
@@ -86,12 +145,12 @@
                       <option></option>
                     </select></p><br>
     
-        <p>CARD NUMBER:   <input type="number" name="cnum" placeholder="CARD NUMBER"></p> <br>
-        <p>CVV:<input type="number" name="cvv" placeholder="CVV"></p>
-        <p>CARD'S HOLDER NAME:<input type ="text" placeholder="ENTER NAME" name="hname"/></p>
-        <p>CARD'S HOLDER CONTACT NUMBER:<input type="number" placeholder="ENTER CONTACT NUMBER" name="hcnumber"></p>
+        <p>CARD NUMBER:   <input id="inp" type="number" name="cnum" placeholder="CARD NUMBER"></p> <br>
+        <p>CVV:<input id="inp" type="number" name="cvv" placeholder="CVV"></p>
+        <p>CARD'S HOLDER NAME:<input id="inp" type ="text" placeholder="ENTER NAME" name="hname"/></p>
+        <p>CARD'S HOLDER CONTACT NUMBER:<input id="inp" type="number" placeholder="ENTER CONTACT NUMBER" name="hcnumber"></p>
         <p></p>
-    <input type="submit" value="PAY">
+        <input id="btn" type="submit" value="PAY">
             </fieldset>
         </form>
         </div>

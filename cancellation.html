@@ -1,94 +1,153 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <title>Train E-ticketing</title>
-    </head>
+
+<head>
+    <title>Train E-ticketing</title>
+</head>
 <style>
     body {
-        background-image:url("railway10.jpg");
+        background-image: url("railway10.jpg");
         background-repeat: no-repeat;
-        background-size: 150%;
-        
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Montserrat, sans-serif;
+
     }
-    .navigation_bar
-    {
-        
-        background-color:yellow;
-        border-width: thick;
-        border-bottom-style: ridge;
-        width: inherit;
-        height:50px;
-        overflow: hidden;
-        
+
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: 0;
+        list-style: none;
+        box-sizing: border-box;
+        border-style: none;
+
     }
-    a{
-        text-decoration:none;
-        padding:20px;
-        font-size: 25px;
+
+    nav {
+        background-color: #2f496e;
+        height: 80px;
+        width: 100%;
+        position: fixed;
     }
-    a:hover{
-        color:chartreuse;
-        background-color:darkseagreen;
+
+    label.heading {
+        font-size: 35px;
+        padding: 0 40px;
+        text-transform: uppercase;
+        color: #f4eade;
+        line-height: 80px;
+        font-weight: 700;
     }
-    .active{
-        color:indianred;
-        background-color: aqua;
+
+    nav ul {
+        float: right;
+        margin-right: 20px;
+
     }
-    .registration{
+
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+        list-style: none;
+    }
+
+    a {
+        color: #f4eade;
+        text-decoration: none;
+        padding: 10px 15px;
+        text-transform: uppercase;
+    }
+
+    nav ul li a:active,
+    nav ul li a:hover {
+        background-color: #f4eade;
+        color: #2f496e;
+        transition-duration: 0.5s;
+        border-bottom-width: 5px;
+        border-bottom-color: #2988bc;
+        border-bottom-style: solid;
+        border-right-width: 5px;
+        border-right-color: #2988bc;
+        border-right-style: solid;
+
+    }
+
+    .registration {
         text-align: center;
         padding: 20px;
-        margin:auto;
-        clear:both;
-        
+        margin: auto;
+        clear: both;
+
     }
-    
-    #l{
-        font-size:50px;
-        font-family: serif;
-        color: #d04d26;
+
+    .f {
+        border-style: none;
+        background-color: #2f496e7a;
+        padding: 30px 0px;
+        margin: 80px 20%;
+        display: flex;
+
     }
+
+    #l {
+        font-size: 50px;
+        color: #f4eade;
+        font-weight: 700;
+        margin-bottom: 20px;
     }
-    .f{
-        border-color: aqua;
-        border-width: thick;
-        width:inherit;
-        
-        
+
+    p {
+        font-size: 20px;
+        color: #faf3eb;
     }
-      .foot{
-        float: right;
-        background-color: aqua;
-        
+
+    #num {
+        padding: 10px;
+
     }
-    #1{
-        float:right;
+
+    #btn {
+        background-color: #2f496e;
+        color: #f4eade;
+        margin: 20px 5%;
+        padding: 10px 20px;
     }
-  
-    </style>
+
+    #btn:hover {
+        background-color: #f4eade;
+        color: #2f496e;
+    }
+</style>
+
 <body>
-<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href ="cancellation.html"> Cancel Reservation</a>
-    </div>
-    
+    <nav>
+        <label class="heading">Train Ticket Booking</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="passenger.html">passenger</a></li>
+            <li><a href="TrainStatus.html">Train Status</a></li>
+            <li><a href="mailto:yuvaraj1392002@gmail.com">Contact us</a></li>
+
+        </ul>
+    </nav>
+
     <div class="registration">
         <form action="cancellation.php" method="post">
             <fieldset class="f"><label id="l"> TICKET CANCELLATION</label> <br>
-                <p>E-Ticket Number<input type="number" placeholder="ENTER 10 DIGIT TICKET NUMBER" name="eticket" max=10/ REQUIRED></p>
-                <p>  <input  type="submit" value="CANCEL TICKET"/><a href="home.html">
- <input type="button" value="BACK"/> </a> </p>
-                       
-        </fieldset>
+                <p>E-Ticket Number <input id="num" type="tel" placeholder="ENTER 10 DIGIT PNR NUMBER" name="eticket"
+                        max=10/ REQUIRED></p>
+                <p> <input id="btn" type="submit" value="CANCEL TICKET" /><a href="home.html">
+                        <input id="btn" type="button" value="BACK" /> </a> </p>
+
+            </fieldset>
         </form>
     </div>
 
-         
-    
-    
+
+
+
 </body>
+
 </html>
-    
