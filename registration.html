@@ -1,127 +1,196 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <title>Train E-ticketing</title>
-        <script type="text/javascript">
-    function formValidation()
-{
-    var username=document.getElementById('uname').value;
-     var letters=/^[A-Za-z]+\d{1,}$/;
-        if(!username.match(letters))
-            alert("Username must be alphabet and contain atleast one digit");
-    
-    
-    var num1=document.getElementById('number').value;
-       var  num=/^\d{10}$/;
-        if(!num1.match(num))
-            alert("Wrong phone number");
-    
-    
-    var pass1 = document.getElementById('password').value; 
-       var pass = /[A-Za-z]*[^A-Za-z0-9]+\d{1,}$/;
-      if(!pass1.match(pass)) 
-      alert("password format is invalid\nplease include atleast 1 digit and 1 special character");
-    
-    
-    
-    var confp=document.getElementById('cpassword').value;
-    if(confp!=pass1)
-        alert("Confirm password does not match with original password");
-    
-      
-    
-   
-}
-    
+
+<head>
+    <title>Train E-ticketing</title>
+    <script type="text/javascript">
+        function formValidation() {
+            var username = document.getElementById('uname').value;
+            var letters = /^[A-Za-z]+\d{1,}$/;
+            if (!username.match(letters))
+                alert("Username must be alphabet and contain atleast one digit");
+
+
+            var num1 = document.getElementById('number').value;
+            var num = /^\d{10}$/;
+            if (!num1.match(num))
+                alert("Wrong phone number");
+
+
+            var pass1 = document.getElementById('password').value;
+            var pass = /[A-Za-z]*[^A-Za-z0-9]+\d{1,}$/;
+            if (!pass1.match(pass))
+                alert("password format is invalid\nplease include atleast 1 digit and 1 special character");
+
+
+
+            var confp = document.getElementById('cpassword').value;
+            if (confp != pass1)
+                alert("Confirm password does not match with original password");
+
+
+
+
+        }
+
     </script>
-    </head>
+</head>
 <style>
     body {
-        background-image:url("railway10.jpg");
+        background-image: url("railway10.jpg");
         background-repeat: no-repeat;
-        background-size: 150%;
-        
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Montserrat, sans-serif;
+
     }
-    .navigation_bar
-    {
-        
-        background-color:yellow;
-        border-width: thick;
-        border-bottom-style: ridge;
-        width: inherit;
-        height:50px;
-        overflow: hidden;
-        
-    }
-    a{
-        text-decoration:none;
-        padding:20px;
-        font-size: 25px;
-    }
-    a:hover{
-        color:chartreuse;
-        background-color:darkseagreen;
-    }
-    .active{
-        color:indianred;
-        background-color: aqua;
-    }
-    .registration{
+    *{
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: #2f496e;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+label.heading{
+    font-size: 35px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    color: #f4eade;
+    line-height: 80px;
+    font-weight: 700;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    list-style: none;
+}
+ a{
+    color: #f4eade;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+a:active,a:hover{
+    background-color: #f4eade;
+    color: #2f496e;
+    transition-duration: 0.5s;
+    border-bottom-width: 5px;
+    border-bottom-color: #2988bc;
+    border-bottom-style: solid;
+    border-right-width: 5px;
+    border-right-color: #2988bc;
+    border-right-style: solid;
+
+}    
+    
+    
+
+   
+
+    .registration {
         text-align: center;
         padding: 20px;
-        margin:auto;
-        clear:both;
-        
+        margin: auto;
+        clear: both;
+
     }
-    
-    #l{
-        font-size:50px;
-        font-family: cursive;
-        color: red;
+    form{
+        padding: 10px;
     }
     .f{
-        border-color: aqua;
-        border-width: thick;
-        width:inherit;
+        border-style: none;
+        background-color: #2f496e7a;
+        padding: 30px 0px;
+        margin: 80px 30%;
+        display: flex;
         
-        
-    }
-      .foot{
-        float: right;
-        background-color: aqua;
-        
-    }
-    #1{
-        float:right;
     }
 
-    </style>
+    #l {
+        font-size: 50px;
+        color: #f4eade;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    p{
+        color: #faf3eb;
+    }
+
+    #inp,#uname,#password,#cpassword,#btn {
+        padding: 10px;
+        text-align: center;
+    }
+    span{
+        font-size: 30px;
+        color: rgb(245, 67, 67);
+    }
+    #btn{
+        background-color: #2f496e;
+        color: #f4eade;
+        margin: 5px 10%;
+    }
+    :hover#btn{
+        background-color: #f4eade;
+        color: #2f496e;
+    }
+</style>
+
 <body>
-<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href ="cancellation.html"> Cancel Reservation</a>
-    </div>
-    
+    <nav>
+        <label class="heading">Train Ticket Booking</label>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="passenger.html" >passenger</a></li>
+            <li><a href="TrainStatus.html" >Train Status</a></li>
+            <li><a href="mailto:yuvaraj1392002@gmail.com" >Contact us</a></li>
+            
+        </ul>
+    </nav>
+
     <div class="registration">
-        <form action="db.php" onsubmit="formValidation()"  method="post">
+        <form action="db.php" onsubmit="formValidation()" method="post">
             <fieldset class="f"><label id="l"> REGISTRATION</label> <br>
-                <p>FIRSTNAME:      <input id="1" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" id="fn" required/><spand style="color:red">  *</spand></p><br>
-                <p> LASTNAME:      <input id="1" type="text" placeholder="LASTNAME" name="LASTNAME" id="ln" required/><spand style="color:red">  *</spand></p><br>
-                <p>E-mail ID:      <input id="1" type="email" placeholder="E-mail" name="EMAIL" ></p><br>
-           <p>CONTACT NUMBER:      <input  id="1" type="number" placeholder="Number" name="CONTACT_NO" id="number" required/><spand style="color:red">  *</spand></p><br>
-                   <p>GENDER:      <input type="radio"  name="GENDER" value="male" checked>Male<input type="radio"  name="GENDER" value="female">Female</p><br>
-                 <p>USERNAME:      <input type="text" placeholder="username" name="USERNAME" id="uname" required/><spand style="color:red">  *</spand><br></p>
-                <p>PASSWORD :      <input type="password" placeholder="password" name="PASSWORD" id="password" required/><spand style="color:red">  *</spand></p><br>
-         <p>CONFIRM PASSWORD:      <input type="password" placeholder="password" id="cpasswprd" required/><spand style="color:red">  *</spand></p><br>
-                <p><input type="submit" value="SUBMIT"/>                <input type="reset" value="RESET"/></p>
-                       
-        </fieldset>
+                <p>FIRSTNAME: <input id="inp" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" id="fn" required />
+                    <span >*</span>
+                </p><br>
+                <p> LASTNAME: <input id="inp" type="text" placeholder="LASTNAME" name="LASTNAME" id="ln" required />
+                    <span >*</span>
+                </p><br>
+                <p>E-mail ID: <input id="inp" type="email" placeholder="E-mail" name="EMAIL"></p><br>
+                <p>CONTACT NUMBER: <input id="inp" type="tel" placeholder="Phone Number" name="CONTACT_NO" id="number"
+                        required />
+                    <span > *</span>
+                </p><br>
+                <p>GENDER: <input type="radio" name="GENDER" value="male" >  Male &nbsp;  <input type="radio" name="GENDER"
+                        value="female"> Female</p><br>
+                <p>USERNAME: <input type="text" placeholder="username" name="USERNAME" id="uname" required />
+                    <span > *</span>
+                </p><br>
+                <p>PASSWORD : <input type="password" placeholder="password" name="PASSWORD" id="password" required />
+                    <span > *</span>
+                </p><br>
+                <p>CONFIRM PASSWORD: <input type="password" placeholder="password" id="cpassword" required />
+                    <span > *</span>
+                </p><br>
+                <p><input id="btn" type="submit" value="Sign up" />  <input id="btn" type="reset" value="RESET" /></p>
+            </fieldset>
+            <p style="font-size: 20px;">Already have an account</p>
+            <input style="padding-right: 30px; padding-left: 30px;" id="btn" type="button" value="Login" onclick="document.location='./account.html'" />
         </form>
-    </div>   
+    </div>
 </body>
+
 </html>
-    
