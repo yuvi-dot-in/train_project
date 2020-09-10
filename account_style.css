@@ -9,6 +9,8 @@
 body{
     font-family: Montserrat, sans-serif;
     background-image:url("railway10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
@@ -68,6 +70,8 @@ a:active,a:hover{
   font-weight: 100;
   text-align: center;
   font-size: 2.3em;
+  color: #f4eade;
+  padding: 10px;
 }
 
 .login-card input[type=submit] {
@@ -88,9 +92,8 @@ a:active,a:hover{
   border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
   /* border-radius: 2px; */
-  padding: 10px 8px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  padding: 20px 8px;
+
 }
 
 .login-card input[type=text]:hover, input[type=password]:hover {
@@ -111,6 +114,7 @@ a:active,a:hover{
   text-transform: capitalize;
   padding: 10px;
   margin-top: 30px;
+  
 
 }
 
@@ -139,21 +143,18 @@ a:active,a:hover{
 .login-help {
   width: 100%;
   text-align: center;
-  font-size: 12px;
+  font-size: 30px;
+  color: #f4eade;
+
 }    
         
-    .active{
-        color:indianred;
-        background-color: aqua;
-    }
-      .foot{
-        float: right;
-        background-color: aqua;
-        margin-top: 500px;
-    }
-    #register:hover{
-        background-color: 
-    }
+.login-help .a{
+    background-color: #2f496e;
+    color: #f4eade;
+
+}
+
+
     
 
     h3{
