@@ -1,0 +1,169 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Montserrat, sans-serif;
+    background-image:url("railway10.jpg");
+
+}
+
+nav{
+    background-color: #2f496e;
+    height: 80px;
+    width: 100%;
+}
+label.heading{
+    font-size: 35px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    color: #f4eade;
+    line-height: 80px;
+    font-weight: 700;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    list-style: none;
+}
+ a{
+    color: #f4eade;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+a:active,a:hover{
+    background-color: #f4eade;
+    color: #2f496e;
+    transition-duration: 0.5s;
+    border-bottom-width: 5px;
+    border-bottom-color: #2988bc;
+    border-bottom-style: solid;
+    border-right-width: 5px;
+    border-right-color: #2988bc;
+    border-right-style: solid;
+
+}
+
+.login-card {
+  padding: 40px;
+  background-color: #2f496e7a;
+  margin: 50px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.979);
+  overflow: hidden;
+}
+
+.login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.login-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.login-card input[type=text], input[type=password] {
+  
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 10px 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.login-card input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+
+}
+
+.login {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.login-submit {
+  color: #f4eade;
+  background-color: #2f496e;
+  text-transform: capitalize;
+  padding: 10px;
+  margin-top: 30px;
+
+}
+
+.login-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  background-color: #f4eade;
+  color: #2f496e;
+  transition-duration: 0.5s;    
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.login-card a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-card a:hover {
+  opacity: 1;
+}
+
+.login-help {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}    
+        
+    .active{
+        color:indianred;
+        background-color: aqua;
+    }
+      .foot{
+        float: right;
+        background-color: aqua;
+        margin-top: 500px;
+    }
+    #register:hover{
+        background-color: 
+    }
+    
+
+    h3{
+        margin-left: 550px;
+    }
+    .foot{
+        float:none;
+        background-color: #4ded60;
+          text-align:center;
+    }
+    #t1{
+        margin: auto;
+    }
