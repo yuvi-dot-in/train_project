@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Train E-ticketing</title>
+    </head>
+<style>
+    body {
+        background-image:url("railway10.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+    .navigation_bar
+    {
+        
+        background-color:yellow;
+        border-width: thick;
+        border-bottom-style: ridge;
+        width: inherit;
+        height:50px;
+        overflow: hidden;
+        
+    }
+    a{
+        text-decoration:none;
+        padding:20px;
+        font-size: 25px;
+    }
+    a:hover{
+        color:chartreuse;
+        background-color:darkseagreen;
+    }
+    .active{
+        color:indianred;
+        background-color: aqua;
+    }
+    .registration{
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        clear:both;
+        
+    }
+    
+    #l{
+        font-size:50px;
+        font-family: serif;
+        color: #d04d26;
+    }
+    }
+    .f{
+        border-color: aqua;
+        border-width: thick;
+        width:inherit;
+        
+        
+    }
+      .foot{
+        float: right;
+        background-color: aqua;
+        
+    }
+    #1{
+        float:right;
+    }
+  
+    </style>
+<body>
+<div class="navigation_bar">
+   
+     <a  href="home.html" > Logout</a>
+        <a href="#"> Passenger</a>
+        <a  class="active" href ="#"> Cancel Reservation</a>
+        <a href="admin.html"> Home</a>
+    </div>
+
+    <div class="registration">
+        <form action="adcancellation.php" method="post">
+            <fieldset class="f"><label id="l"> TICKET CANCELLATION</label> <br>
+                <p>E-Ticket Number<input type="number" placeholder="ENTER 10 DIGIT TICKET NUMBER" name="eticket" max=10/ REQUIRED></p>
+                <p>  <input  type="submit" value="CANCEL TICKET"/><a href="admin.html">
+ <input type="button" value="BACK"/> </a> </p>
+                       
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+    

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Train E-ticketing</title>
+    </head>
+<style>
+    body {
+        background-image:url("railway10.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+    .navigation_bar
+    {
+        
+        background-color:yellow;
+        border-width: thick;
+        border-bottom-style: ridge;
+        width: inherit;
+        height:50px;
+        overflow: hidden;
+        
+    }
+    a{
+        text-decoration:none;
+        padding:20px;
+        font-size: 25px;
+    }
+    a:hover{
+        color:chartreuse;
+        background-color:darkseagreen;
+    }
+    .active{
+        color:indianred;
+        background-color:aqua;
+    }
+    .registration{
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        clear:both;
+        
+    }
+    #ui{
+        color:#800022;
+        font-style:bradley hand itc;
+        font-size: 25px;
+    }
+    #l{
+        font-size:50px;
+        font-family: serif;
+        color: #d04d26;
+    }
+    .f{
+        border-color: #00ff89;
+        border-width: thick;
+        width:inherit;
+        
+        
+    }
+      .foot{
+        float:none;
+        background-color: #4ded60;
+          text-align:center;
+        
+    }
+    #1{
+        float:right;
+    }
+    #payment{
+        margin-left: 100px;
+    }
+    .bleh:hover{
+        background-color:;
+    }
+
+    </style>
+<body>
+<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href ="cancellation.html"> Cancel Reservation</a>
+    </div>
+    
+    <div class="registration">
+        <form action="passengerDetails.php" method="post">
+            <fieldset class="f"><label id="l"> ENTER PASSENGER DETAILS</label> <br>
+                <p>FIRSTNAME:      <input id="1" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" required/></p><br>
+                <p>LASTNAME:      <input id="1" type="text" placeholder="LASTNAME" name="LASTNAME"  required/></p><br>
+				<p>DATE OF BIRTH:<input type="date"  name="DOB" required/></p>
+                <p>GENDER:      <input type="radio"  name="GENDER" value="male" checked required/>Male<input type="radio"  name="GENDER" value="female" />Female</p><br>
+                <p>SEAT NUMBER:<input type="text" name="SEATNUMBER" required/></p>
+                <p>CONTACT NUMBER:      <input  id="1" type="text" placeholder="Number" name="CNUMBER" required/></p><br>
+                
+                <p>  <a href="home.html"><input  type="button" value="Back"/></a><input id="payment" type="submit" value="Proceed to payment" />  </p>
+                       
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>

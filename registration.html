@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Train E-ticketing</title>
+        <script type="text/javascript">
+    function formValidation()
+{
+    var username=document.getElementById('uname').value;
+     var letters=/^[A-Za-z]+\d{1,}$/;
+        if(!username.match(letters))
+            alert("Username must be alphabet and contain atleast one digit");
+    
+    
+    var num1=document.getElementById('number').value;
+       var  num=/^\d{10}$/;
+        if(!num1.match(num))
+            alert("Wrong phone number");
+    
+    
+    var pass1 = document.getElementById('password').value; 
+       var pass = /[A-Za-z]*[^A-Za-z0-9]+\d{1,}$/;
+      if(!pass1.match(pass)) 
+      alert("password format is invalid\nplease include atleast 1 digit and 1 special character");
+    
+    
+    
+    var confp=document.getElementById('cpassword').value;
+    if(confp!=pass1)
+        alert("Confirm password does not match with original password");
+    
+      
+    
+   
+}
+    
+    </script>
+    </head>
+<style>
+    body {
+        background-image:url("railway10.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+    .navigation_bar
+    {
+        
+        background-color:yellow;
+        border-width: thick;
+        border-bottom-style: ridge;
+        width: inherit;
+        height:50px;
+        overflow: hidden;
+        
+    }
+    a{
+        text-decoration:none;
+        padding:20px;
+        font-size: 25px;
+    }
+    a:hover{
+        color:chartreuse;
+        background-color:darkseagreen;
+    }
+    .active{
+        color:indianred;
+        background-color: aqua;
+    }
+    .registration{
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        clear:both;
+        
+    }
+    
+    #l{
+        font-size:50px;
+        font-family: cursive;
+        color: red;
+    }
+    .f{
+        border-color: aqua;
+        border-width: thick;
+        width:inherit;
+        
+        
+    }
+      .foot{
+        float: right;
+        background-color: aqua;
+        
+    }
+    #1{
+        float:right;
+    }
+
+    </style>
+<body>
+<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href ="cancellation.html"> Cancel Reservation</a>
+    </div>
+    
+    <div class="registration">
+        <form action="db.php" onsubmit="formValidation()"  method="post">
+            <fieldset class="f"><label id="l"> REGISTRATION</label> <br>
+                <p>FIRSTNAME:      <input id="1" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" id="fn" required/><spand style="color:red">  *</spand></p><br>
+                <p> LASTNAME:      <input id="1" type="text" placeholder="LASTNAME" name="LASTNAME" id="ln" required/><spand style="color:red">  *</spand></p><br>
+                <p>E-mail ID:      <input id="1" type="email" placeholder="E-mail" name="EMAIL" ></p><br>
+           <p>CONTACT NUMBER:      <input  id="1" type="number" placeholder="Number" name="CONTACT_NO" id="number" required/><spand style="color:red">  *</spand></p><br>
+                   <p>GENDER:      <input type="radio"  name="GENDER" value="male" checked>Male<input type="radio"  name="GENDER" value="female">Female</p><br>
+                 <p>USERNAME:      <input type="text" placeholder="username" name="USERNAME" id="uname" required/><spand style="color:red">  *</spand><br></p>
+                <p>PASSWORD :      <input type="password" placeholder="password" name="PASSWORD" id="password" required/><spand style="color:red">  *</spand></p><br>
+         <p>CONFIRM PASSWORD:      <input type="password" placeholder="password" id="cpasswprd" required/><spand style="color:red">  *</spand></p><br>
+                <p><input type="submit" value="SUBMIT"/>                <input type="reset" value="RESET"/></p>
+                       
+        </fieldset>
+        </form>
+    </div>   
+</body>
+</html>
+    

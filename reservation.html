@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Train E-ticketing</title>
+        
+    </head>
+<style>
+    body {
+        background-image:url("railway10.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+    .navigation_bar
+    {
+        
+        background-color:yellow;
+        border-width: thick;
+        border-bottom-style: ridge;
+        width: inherit;
+        height:50px;
+        overflow: hidden;
+        
+    }
+    a{
+        text-decoration:none;
+        padding:20px;
+        font-size: 25px;
+    }
+    a:hover{
+        color:chartreuse;
+        background-color:darkseagreen;
+    }
+    .active{
+        color:indianred;
+        background-color: aqua;
+    }
+    .registration{
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        clear:both;
+        
+    }
+    
+    #l{
+        font-size:50px;
+        font-family: serif;
+        color: #d04d26;
+    }
+    }
+    .f{
+        border-color: aqua;
+        border-width: thick;
+        width:inherit;
+        
+        
+    }
+      .foot{
+        float: right;
+        background-color: aqua;
+        
+    }
+    #1{
+        float:right;
+    }
+    #selected{
+        margin-left: 200px;
+    }
+    
+
+    </style>
+<body>
+<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href ="cancellation.html"> Cancel Reservation</a>
+    </div>
+    
+    <div class="registration">
+        <form action="search.php" method="post">
+            <fieldset class="f"><label id="l"> SEARCH TRAIN FOR RESERVATION</label> <br>
+                <p> <bold>Journey Type:</bold><input type="radio"  name="journey"/>One way<input type="radio"  value="Round Trip" name="journey"/> Round Trip</p>
+
+                <p> DEPARTURE CITY:<select id ="#selected"  name="departure">
+                    <option id ="#selected" selected="selected">--SELECT A LOCATION--</option>
+                      <option value="Bangalore">BLR,Bangalore Railway Station</option>
+                      <option value="Chennai">MAA,Chennai Railway Station</option>
+                      <option value="Kolkata">CCU,Kolkata Railway Station</option>
+					<option value="Mumbai">BOM,Mumbai Railway Station</option> 
+					<option value="Kochi">COK,Kochi Railway Station</option>
+                      <option value="New Delhi">DEL,New Delhi Railway Station</option>
+					<option value="Ahmedabad">AMD,Ahmedabad Railway Station</option>
+					<option value="Pune">PNQ,Pune Railway Station</option>
+					<option value="Chandigarh">IXC,Chandigarh Railway Station</option>
+					<option value="Rajkot">RJT,Rajkot Railway Station</option>
+					<option value="Bhopal">BHP,Bhopal Railway Station</option>
+					<option value="THIRUVANANTHAPURAM">TRU,Trivendrum Railway Station</option>
+					<option value="MANGALORE">MGL,Mangalore Railway Station</option>
+                    </select></p>
+                
+                 <p> ARRIVAL CITY:<select name="arrival" >
+                    <option id ="#selected" selected="selected">--SELECT A LOCATION--</option>
+                      <option value="Bangalore">BLR,Bangalore Railway Station</option>
+                      <option value="Chennai">MAA,Chennai Railway Station</option>
+                      <option value="Kolkata">CCU,Kolkata Railway Station</option>
+					<option value="Mumbai">BOM,Mumbai Railway Station</option> 
+					<option value="Kochi">COK,Kochi Railway Station</option>
+                      <option value="New Delhi">DEL,New Delhi Railway Station</option>
+					<option value="Ahmedabad">AMD,Ahmedabad Railway Station</option>
+					<option value="Pune">PNQ,Pune Railway Station</option>
+					<option value="Chandigarh">IXC,Chandigarh Railway Station</option>
+					<option value="Rajkot">RJT,Rajkot Railway Station</option>
+					<option value="Bhopal">BHP,Bhopal Railway Station</option>
+					<option value="THIRUVANANTHAPURAM">TRU,Trivendrum Railway Station</option>
+					<option value="MANGALORE">MGL,Mangalore Railway Station</option>
+                    </select></p>
+                <p>DEPARTURE DATE:<input type="date" name='DATE'/required></p>
+                <div>
+                    <p> NUMBER OF TARVELLERS</p>
+                    <p> Adult(18 yrs+)<input type="number" min="1" max="10" required> Children(2-17 yrs)<input type="number" min="0" max="10" required>Infant(Below 2 yrs):<input type ="number" min="0" max="10" required></p>
+                
+                </div> 
+                 <p> <a href="search.php"><input  type="submit" name="submit" value="Search Flight"/></a><a href="home.html"><input type="button" value="Cancel"/> </a></p>
+                       
+        </fieldset>
+        </form>
+    </div>  
+</body>
+</html>  

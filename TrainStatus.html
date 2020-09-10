@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Train E-ticketing</title>
+    </head>
+<style>
+    body {
+        background-image:url("railway10.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+    .navigation_bar
+    {
+        
+        background-color:yellow;
+        border-width: thick;
+        border-bottom-style: ridge;
+        width: inherit;
+        height:50px;
+        overflow: hidden;
+        
+    }
+    a{
+        text-decoration:none;
+        padding:20px;
+        font-size: 25px;
+    }
+    a:hover{
+        color:chartreuse;
+        background-color:darkseagreen;
+    }
+    .active{
+        color:indianred;
+        background-color: aqua;
+    }
+    .registration{
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        clear:both;
+        
+    }
+    
+    #l{
+        font-size:50px;
+        font-family: serif;
+        color: #d04d26;
+    }
+    }
+    .f{
+        border-color: aqua;
+        border-width: thick;
+        width:inherit;
+        
+        
+    }
+      .foot{
+        float: right;
+        background-color: aqua;
+        
+    }
+    #1{
+        float:right;
+    }
+  
+    </style>
+<body>
+<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href ="cancellation.html"> Cancel Reservation</a>
+    </div>
+    
+    <div class="registration">
+        <form action="TrainStatus.php" method="post">
+            <fieldset class="f"><label id="l"> CHECK TRAIN STATUS</label> <br>
+                <p>E-Ticket Number<input type="number" placeholder="ENTER 10 DIGIT TICKET NUMBER" name="eticket"/ required></p>
+                <p> NOTIFY ME USING VOICE CALL?:<input type="radio"  name="notify"  checked>Yes!<input type="radio"  name="notify" >No!<br></p>
+                <p>  <input  type="submit" value="CHECK STATUS"/> <a href="home.html">
+<input type="reset" value="Cancel"/> </a> </p>
+                       
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>

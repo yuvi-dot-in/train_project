@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Train E-ticketing</title>
+    </head>
+<style>
+ body {
+        background-image:url("railway10.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+    .navigation_bar
+    {
+        
+        background-color:yellow;
+        border-width: thick;
+        border-bottom-style: ridge;
+        width: inherit;
+        height:50px;
+        overflow: hidden;
+        
+    }
+    a{
+        text-decoration:none;
+        padding:20px;
+        font-size: 25px;
+    }
+    a:hover{
+        color:chartreuse;
+        background-color:darkseagreen;
+    }
+    .active{
+        color:indianred;
+        background-color: aqua;
+    }
+    .registration{
+        text-align: center;
+        padding: 20px;
+        margin:auto;
+        clear:both;
+        
+    }
+    
+    #l{
+        font-size:50px;
+        font-family: cursive;
+        color: red;
+    }
+    .f{
+        border-color: aqua;
+        border-width: thick;
+        width:inherit;
+        
+        
+    }
+      .foot{
+        float: right;
+        background-color: aqua;
+        
+    }
+    #1{
+        float:right;
+    }
+    #selected{
+        margin-left: 200px;
+    }
+    
+    </style>
+<body>
+<div class="navigation_bar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  href="home.html" > Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="account.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="passenger.html"> Passenger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="reservation.html">Online Reservation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="TrainStatus.html">Train Status</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href ="cancellation.html"> Cancel Reservation</a>
+    </div>
+    <div class="login">
+        <form action="payment.php" method="post">
+              <fieldset class="f"><label id="l"> MAKE PAYMENT</label>
+        <p>PAYMENT MODE :<select><option id ="#selected" selected="selected">--SELECT MODE--</option>
+                      <option>Credit Card</option>
+                      <option>Debit Card</option>
+                      <option>Net Banking</option>
+                      <option></option>
+                    </select></p><br>
+    
+        <p>CARD NUMBER:   <input type="number" name="cnum" placeholder="CARD NUMBER"></p> <br>
+        <p>CVV:<input type="number" name="cvv" placeholder="CVV"></p>
+        <p>CARD'S HOLDER NAME:<input type ="text" placeholder="ENTER NAME" name="hname"/></p>
+        <p>CARD'S HOLDER CONTACT NUMBER:<input type="number" placeholder="ENTER CONTACT NUMBER" name="hcnumber"></p>
+        <p></p>
+    <input type="submit" value="PAY">
+            </fieldset>
+        </form>
+        </div>
+</body>
+</html>
+    
