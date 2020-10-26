@@ -16,7 +16,7 @@ nav{
     width: 100%;
 }
 label.heading{
-    font-size: 35px;
+    font-size: 2vw;
     padding: 0 40px;
     text-transform: uppercase;
     color: #f4eade;
@@ -33,6 +33,7 @@ nav ul li{
     line-height: 80px;
     margin: 0 5px;
     list-style: none;
+    font-size: 1vw;
 }
  a{
     color: #f4eade;

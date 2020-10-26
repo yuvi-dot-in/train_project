@@ -10,7 +10,7 @@
             var username = document.getElementById('uname').value;
             var letters = /^[A-Za-z]+\d{1,}$/;
             if (!username.match(letters))
-                alert("Username must be alphabet and contain atleast one digit");
+                alert('Username must be alphabet and contain atleast one digit')
 
 
             var num1 = document.getElementById('number').value;
@@ -63,7 +63,7 @@
     }
 
     label.heading {
-        font-size: 35px;
+        font-size: 2vw;
         padding: 0 40px;
         text-transform: uppercase;
         color: #f4eade;
@@ -82,6 +82,7 @@
         line-height: 80px;
         margin: 0 5px;
         list-style: none;
+        font-size: 1vw;
     }
 
     a {
@@ -123,10 +124,9 @@
 
     .f {
         border-style: none;
-        background-color: #2f496e7a;
+        background-color: #2f496eaf;
         padding: 30px 0px;
         margin: 80px 30%;
-        display: flex;
 
     }
 
@@ -197,36 +197,40 @@ footer a:hover{
     </nav>
 
     <div class="registration">
-        <form action="db.php" onsubmit="formValidation()" method="post">
-            <fieldset class="f"><label id="l"> REGISTRATION</label> <br>
-                <p>FIRSTNAME: <input id="inp" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" id="fn" required />
-                    <span>*</span>
-                </p><br>
-                <p> LASTNAME: <input id="inp" type="text" placeholder="LASTNAME" name="LASTNAME" id="ln" required />
-                    <span>*</span>
+        <div class="f"><h1 id="l"> REGISTRATION</h1> <br>
+            <form action="" onsubmit="formValidation()" method="post">
+                <p>First Name: <input id="inp" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" id="fn" required />
+                    <span id="f_error">*</span>
+                </p>
+                <br>
+                <p> Last Name: <input id="inp" type="text" placeholder="LASTNAME" name="LASTNAME" id="ln" required />
+                    <span id="l_error">*</span>
                 </p><br>
                 <p>E-mail ID: <input id="inp" type="email" placeholder="E-mail" name="EMAIL"></p><br>
-                <p>CONTACT NUMBER: <input id="inp" type="tel" placeholder="Phone Number" name="CONTACT_NO" id="number"
+                <p>Phone: <input id="inp" type="tel" placeholder="Phone Number" name="CONTACT_NO" id="number"
                         required />
-                    <span> *</span>
+                    <span id="phone_error"> *</span>
                 </p><br>
-                <p>GENDER: <input type="radio" name="GENDER" value="male"> Male &nbsp; <input type="radio" name="GENDER"
+                <p>Gender: <input type="radio" name="GENDER" value="male"> Male &nbsp; <input type="radio" name="GENDER"
                         value="female"> Female</p><br>
-                <p>USERNAME: <input type="text" placeholder="username" name="USERNAME" id="uname" required />
-                    <span> *</span>
+                <p>Username: <input type="text" placeholder="username" name="USERNAME" id="uname" required />
+                    <span id="User_error"> *</span>
                 </p><br>
-                <p>PASSWORD : <input type="password" placeholder="password" name="PASSWORD" id="password" required />
-                    <span> *</span>
+                <p>Password : <input type="password" placeholder="password" name="PASSWORD" id="password" required />
+                    <span id="pass_errror"> *</span>
                 </p><br>
-                <p>CONFIRM PASSWORD: <input type="password" placeholder="password" id="cpassword" required />
-                    <span> *</span>
+                <p>Confirm Password: <input type="password" placeholder="password" id="cpassword" required />
+                    <span id="cnf_error"> *</span>
                 </p><br>
                 <p><input id="btn" type="submit" value="Sign up" /> <input id="btn" type="reset" value="RESET" /></p>
-            </fieldset>
-            <p style="font-size: 20px;">Already have an account</p>
-            <input style="padding-right: 30px; padding-left: 30px;" id="btn" type="button" value="Login"
-                onclick="document.location='./account.html'" />
-        </form>
+            </form>
+    
+        </div>
+            <div class="f">
+                <p style="font-size: 20px;">Already have an account</p>
+                <input style="padding-right: 30px; padding-left: 30px;" id="btn" type="button" value="Login"
+                    onclick="document.location='./account.html'" />
+            </div>
     </div>
 </body>
 <footer><br>
