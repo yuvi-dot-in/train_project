@@ -95,12 +95,11 @@
         background-color: #2f496e7a;
         padding: 30px 0px;
         margin: 80px 20%;
-        display: flex;
 
     }
 
     #l {
-        font-size: 50px;
+        font-size: 2vw;
         color: #f4eade;
         font-weight: 700;
         margin-bottom: 20px;
@@ -117,9 +116,6 @@
         color: #faf3eb;
     }
 
-    #1 {
-        float: right;
-    }
 
     #payment {
         margin-left: 100px;
@@ -138,12 +134,14 @@
         background-color: #f4eade;
         color: #2f496e;
     }
-    footer{
-    background-color: #2f496e;
-    color: #f4eade;
-    text-align: center;
-}
-footer a:hover{
+
+    footer {
+        background-color: #2f496e;
+        color: #f4eade;
+        text-align: center;
+    }
+
+    footer a:hover {
         background-color: #f4eade;
         color: #2f496e;
         transition-duration: 0.5s;
@@ -154,7 +152,6 @@ footer a:hover{
         border-right-color: #2988bc;
         border-right-style: solid;
     }
-    
 </style>
 
 <body>
@@ -169,8 +166,9 @@ footer a:hover{
     </nav>
 
     <div class="registration">
-        <form action="passengerDetails.php" method="post">
-            <fieldset class="f"><label id="l"> ENTER PASSENGER DETAILS</label> <br>
+        <div class="f">
+            <h1 id="l"> ENTER PASSENGER DETAILS</h1> <br>
+            <form action="passengerDetails.php" method="post">
                 <p>FIRSTNAME: <input id="inp" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" required /></p><br>
                 <p>LASTNAME: <input id="inp" type="text" placeholder="LASTNAME" name="LASTNAME" required /></p><br>
                 <p>DATE OF BIRTH:<input id="inp" type="date" name="DOB" required /></p>
@@ -181,13 +179,13 @@ footer a:hover{
 
                 <p> <a href="index.html"><input id="btn" type="button" value="Back" /></a><input id="btn" type="button"
                         value="Add passenger" /><input id="payment" type="submit" value="Proceed to payment" /> </p>
-
-            </fieldset>
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 <footer><br>
     <p>All Rights reserved by <br>Yuvaraj Javik Sumit <br><br>
-    <a href="ContactUs.html">Contact Us</a></p><br>
+        <a href="ContactUs.html">Contact Us</a></p><br>
 </footer>
+
 </html>
