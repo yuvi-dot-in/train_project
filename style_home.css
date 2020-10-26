@@ -100,7 +100,7 @@ a:active,a:hover{
 }
 .parallax {
     /* The image used */
-    background-image: url("train_anim.png");
+    background-image: url("./images/train_anim.png");
   
     /* Set a specific height */
     min-height: 500px; 
