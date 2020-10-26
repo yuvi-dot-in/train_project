@@ -4,6 +4,21 @@
 <head>
     <title>Train E-ticketing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function (){
+            var allSet = false;
+            $('')
+            $('#addPassenger').click(function(){
+                if(allSet == false)
+                {
+                    $('.f').append("<span id='error'>enter all the details</span>")
+                }
+            })
+        })
+    </script>
 
 </head>
 <style>
@@ -105,31 +120,42 @@
         margin-bottom: 20px;
     }
 
-    #inp {
+    .inp {
         padding: 10px;
         text-align: center;
         margin: 10px;
     }
 
-    p {
+    p,#error {
         font-size: 20px;
         color: #faf3eb;
     }
-
+    #error{
+        color: red !important;
+        background-color: wheat;
+        padding: 5px;
+    }
 
     #payment {
         margin-left: 100px;
     }
 
-    #btn,
+    .btn,
     #payment {
         background-color: #2f496e;
         color: #f4eade;
         margin: 20px 5%;
         padding: 10px 20px;
     }
-
-    #btn:hover,
+    input[type=number] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+    .btn:hover,
     #payment:hover {
         background-color: #f4eade;
         color: #2f496e;
@@ -169,17 +195,18 @@
         <div class="f">
             <h1 id="l"> ENTER PASSENGER DETAILS</h1> <br>
             <form action="passengerDetails.php" method="post">
-                <p>FIRSTNAME: <input id="inp" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" required /></p><br>
-                <p>LASTNAME: <input id="inp" type="text" placeholder="LASTNAME" name="LASTNAME" required /></p><br>
-                <p>DATE OF BIRTH:<input id="inp" type="date" name="DOB" required /></p>
-                <p>GENDER: <input id="inp" type="radio" name="GENDER" value="male" checked required />Male<input
-                        id="inp" type="radio" name="GENDER" value="female" />Female</p><br>
-                <p>SEAT NUMBER:<input id="inp" type="text" name="SEATNUMBER" required /></p>
-                <p>CONTACT NUMBER: <input id="inp" type="text" placeholder="Number" name="CNUMBER" required /></p><br>
+                <p>First Name: <input class="inp" id="f_name" type="text" placeholder="FIRSTNAME" name="FIRSTNAME" required /></p><br>
+                <p>Last Name: <input class="inp" id="l_name" type="text" placeholder="LASTNAME" name="LASTNAME"  /></p><br>
+                <p>Age: <input class="inp" id="dob" type="number" min="1" max="200" name="DOB" required /></p>
+                <p>GENDER: <input class="inp" id="gender" type="radio" name="GENDER" value="male" checked required />Male<input
+                        class="inp" type="radio" name="GENDER" value="female" />Female</p><br>
+                <p>Prefered Berth:<input class="inp"  type="text" name="SEATNUMBER" required /></p>
+                <p>CONTACT NUMBER: <input class="inp" type="text" placeholder="Number" name="CNUMBER" required /></p><br>
 
-                <p> <a href="index.html"><input id="btn" type="button" value="Back" /></a><input id="btn" type="button"
-                        value="Add passenger" /><input id="payment" type="submit" value="Proceed to payment" /> </p>
+                <p> <a href="index.html"><input class="btn" type="button" value="Back" /></a><input class="btn" id="addPassenger" type="button"
+                        value="Add passenger"  /><input id="payment" type="submit" value="Proceed to payment" /> </p>
             </form>
+            <!-- <span id="error"></span> -->
         </div>
     </div>
 </body>

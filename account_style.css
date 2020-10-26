@@ -11,6 +11,7 @@ body{
   background-image:url("./images/railway10.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
 
@@ -107,13 +108,16 @@ border-top: 1px solid #a0a0a0;
 
 }
 
-.login {
+.login , .signIn {
 text-align: center;
 font-size: 30px;
 font-weight: 700;
 }
+.signIn{
+  margin-left: 7vw;
+}
 
-.login-submit {
+.login-submit, .signIn{
 color: #f4eade;
 background-color: #2f496e;
 text-transform: capitalize;
@@ -123,7 +127,7 @@ margin-top: 30px;
 
 }
 
-.login-submit:hover {
+.login-submit:hover ,.signIn:hover {
 /* border: 1px solid #2f5bb7; */
 background-color: #f4eade;
 color: #2f496e;
@@ -145,19 +149,7 @@ transition: opacity ease 0.5s;
 opacity: 1;
 }
 
-.login-help {
-width: 100%;
-text-align: center;
-font-size: 30px;
-color: #f4eade;
 
-}    
-      
-.login-help .a{
-  background-color: #2f496e;
-  color: #f4eade;
-
-}
 .error {
 color: rgb(255, 57, 57);
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -171,8 +163,20 @@ background-color: #f4eadec7;
   h3{
       margin-left: 550px;
   }
-  .foot{
-      float:none;
-      background-color: #4ded60;
-        text-align:center;
-  }
+  
+  footer{
+    background-color: #2f496e;
+    color: #f4eade;
+    text-align: center;
+}
+footer a:hover{
+        background-color: #f4eade;
+        color: #2f496e;
+        transition-duration: 0.5s;
+        border-bottom-width: 5px;
+        border-bottom-color: #2988bc;
+        border-bottom-style: solid;
+        border-right-width: 5px;
+        border-right-color: #2988bc;
+        border-right-style: solid;
+    }

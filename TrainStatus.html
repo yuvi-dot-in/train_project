@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <title>Train E-ticketing</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        </head>
+<head>
+    <title>Train E-ticketing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 <style>
     body {
         background-image: url("./images/railway10.jpg");
@@ -88,7 +89,6 @@
         background-color: #2f496e7a;
         padding: 30px 0px;
         margin: 80px 20%;
-        display: flex;
 
     }
 
@@ -104,10 +104,21 @@
         color: #faf3eb;
         margin-top: 20px;
     }
+
     #num {
         padding: 10px;
         margin: 20px;
 
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 
     #btn {
@@ -121,12 +132,14 @@
         background-color: #f4eade;
         color: #2f496e;
     }
-    footer{
-    background-color: #2f496e;
-    color: #f4eade;
-    text-align: center;
-}
-footer a:hover{
+
+    footer {
+        background-color: #2f496e;
+        color: #f4eade;
+        text-align: center;
+    }
+
+    footer a:hover {
         background-color: #f4eade;
         color: #2f496e;
         transition-duration: 0.5s;
@@ -137,9 +150,8 @@ footer a:hover{
         border-right-color: #2988bc;
         border-right-style: solid;
     }
-    
-  
-    </style>
+</style>
+
 <body>
     <nav>
         <label class="heading">Train Ticket Booking</label>
@@ -150,21 +162,24 @@ footer a:hover{
 
         </ul>
     </nav>
-    
+
     <div class="registration">
         <form action="TrainStatus.php" method="post">
             <fieldset class="f"><label id="l"> CHECK TRAIN STATUS</label> <br>
-                <p>E-Ticket Number<input id="num" type="number" placeholder="ENTER 10 DIGIT TICKET NUMBER" name="eticket"/ required></p>
-                <p> NOTIFY ME USING?:<input id="num" type="radio"  name="notify"  >Mail<input id="num" type="radio"  name="notify" >SMS<br></p>
-                <p>  <input id="btn" type="submit" value="CHECK STATUS"/> <a href="index.html">
-<input id="btn" type="reset" value="Cancel"/> </a> </p>
-                       
-        </fieldset>
+                <p>E-Ticket Number<input id="num" type="number" min="0" max="9999999999" placeholder="ENTER 10 DIGIT TICKET NUMBER"
+                        name="eticket" / required></p>
+                <p> NOTIFY ME USING?:<input id="num" type="radio" name="notify">Mail<input id="num" type="radio"
+                        name="notify">SMS<br></p>
+                <p> <input id="btn" type="submit" value="CHECK STATUS" /> <a href="index.html">
+                        <input id="btn" type="reset" value="Cancel" /> </a> </p>
+
+            </fieldset>
         </form>
     </div>
     <footer><br>
-    <p>All Rights reserved by <br>Yuvaraj Javik Sumit <br><br>
-    <a href="ContactUs.html">Contact Us</a></p><br>
-</footer>
+        <p>All Rights reserved by <br>Yuvaraj Javik Sumit <br><br>
+            <a href="ContactUs.html">Contact Us</a></p><br>
+    </footer>
 </body>
+
 </html>
