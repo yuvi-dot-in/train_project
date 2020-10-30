@@ -1,145 +1,186 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<style>
-    body {
-        background-image: url("./images/railway10.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        font-family: Montserrat, sans-serif;
-        color: #f4eade;
 
-    }
+<head>
+    <title>Train E-Ticketing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("./images/railway10.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Montserrat, sans-serif;
+            color: #f4eade;
 
-    * {
-        margin: 0;
-        padding: 0;
-        text-decoration: 0;
-        list-style: none;
-        box-sizing: border-box;
-        border-style: none;
+        }
 
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: 0;
+            list-style: none;
+            box-sizing: border-box;
+            border-style: none;
 
-    nav {
-        background-color: #2f496e;
-        height: 80px;
-        width: 100%;
-        position: fixed;
-    }
+        }
 
-    label.heading {
-        font-size: 35px;
-        padding: 0 40px;
-        text-transform: uppercase;
-        color: #f4eade;
-        line-height: 80px;
-        font-weight: 700;
-    }
+        nav {
+            background-color: #2f496e;
+            height: 80px;
+            width: 100%;
+            position: fixed;
+        }
 
-    nav ul {
-        float: right;
-        margin-right: 20px;
+        label.heading {
+            font-size: 35px;
+            padding: 0 40px;
+            text-transform: uppercase;
+            color: #f4eade;
+            line-height: 80px;
+            font-weight: 700;
+        }
 
-    }
+        nav ul {
+            float: right;
+            margin-right: 20px;
 
-    nav ul li {
-        display: inline-block;
-        line-height: 80px;
-        margin: 0 5px;
-        list-style: none;
-    }
+        }
 
-    a {
-        color: #f4eade;
-        text-decoration: none;
-        padding: 10px 15px;
-        text-transform: uppercase;
-    }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+            list-style: none;
+        }
 
-    nav ul li a:active,
-    nav ul li a:hover {
-        background-color: #f4eade;
-        color: #2f496e;
-        transition-duration: 0.5s;
-        border-bottom-width: 5px;
-        border-bottom-color: #2988bc;
-        border-bottom-style: solid;
-        border-right-width: 5px;
-        border-right-color: #2988bc;
-        border-right-style: solid;
+        a {
+            color: #f4eade;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-transform: uppercase;
+        }
 
-    }
+        nav ul li a:active,
+        nav ul li a:hover {
+            background-color: #f4eade;
+            color: #2f496e;
+            transition-duration: 0.5s;
+            border-bottom-width: 5px;
+            border-bottom-color: #2988bc;
+            border-bottom-style: solid;
+            border-right-width: 5px;
+            border-right-color: #2988bc;
+            border-right-style: solid;
 
-    .registration {
-        text-align: center;
-        padding: 20px;
-        margin: auto;
-        clear: both;
+        }
 
-    }
+        .registration {
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+            clear: both;
 
-    .f {
-        border-style: none;
-        background-color: #2f496eb4;
-        padding: 30px 0px;
-        margin: 80px 20%;
+        }
 
-    }
+        .f {
+            border-style: none;
+            background-color: #2f496eb4;
+            padding: 30px 0px;
+            margin: 80px 20%;
 
-    #l {
-        font-size: 50px;
-        color: #f4eade;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
+        }
 
-    #inp {
-        padding: 10px;
-        text-align: center;
-        margin: 10px;
-    }
+        #l {
+            font-size: 50px;
+            color: #f4eade;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
 
-    p {
-        font-size: 20px;
-        color: #faf3eb;
-    }
-    pre{
-        color: #f4eade;
-        padding-right: 15%;
-    }
+        #inp {
+            padding: 10px;
+            text-align: center;
+            margin: 10px;
+        }
 
-    #btn {
-        background-color: #2f496e;
-        color: #f4eade;
-        margin: 20px 5%;
-        padding: 10px 20px;
-    }
+        p {
+            font-size: 20px;
+            color: #faf3eb;
+        }
 
-    #btn:hover {
-        background-color: #f4eade;
-        color: #2f496e;
-    }
+        pre {
+            color: #f4eade;
+            padding-right: 15%;
+        }
 
-    footer {
-        background-color: #2f496e;
-        color: #f4eade;
-        text-align: center;
-    }
+        #btn {
+            background-color: #2f496e;
+            color: #f4eade;
+            margin: 20px 5%;
+            padding: 10px 20px;
+        }
 
-    footer a:hover {
-        background-color: #f4eade;
-        color: #2f496e;
-        transition-duration: 0.5s;
-        border-bottom-width: 5px;
-        border-bottom-color: #2988bc;
-        border-bottom-style: solid;
-        border-right-width: 5px;
-        border-right-color: #2988bc;
-        border-right-style: solid;
-    }
-</style>
+        #btn:hover {
+            background-color: #f4eade;
+            color: #2f496e;
+        }
+
+        footer {
+            background-color: #2f496e;
+            color: #f4eade;
+            text-align: center;
+        }
+
+        footer a:hover {
+            background-color: #f4eade;
+            color: #2f496e;
+            transition-duration: 0.5s;
+            border-bottom-width: 5px;
+            border-bottom-color: #2988bc;
+            border-bottom-style: solid;
+            border-right-width: 5px;
+            border-right-color: #2988bc;
+            border-right-style: solid;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.name').focusout(function () {
+                var len = $(this).val();
+                var name = $('.name').val();
+                if (len == 0) {
+                    $('.message').html('Enter Your name')
+                    $('.message').css({ 'color': 'red', "background-color": "wheat", 'font-weight': "700" })
+                }
+                else{
+                    $('.message').html('Thank you '+name+' for contacting us')
+                    $('.message').css({'font-family': 'Montserrat, sans-serif','color': '#f4eade','background-color':'transparent'})
+                }
+            })
+            $('.mailid').focusout(function () {
+                var mailid = $(this).val();
+                var name = $('.name').val();
+                if(!isEmail(mailid))
+                {
+                    $('.message').html('Enter a valid Email Id')
+                    $('.message').css({ 'color': 'red', "background-color": "wheat", 'font-weight': "700" })
+                }
+                else{
+                    $('.message').html('Thank you '+name+' for contacting us')
+                    $('.message').css({'font-family': 'Montserrat, sans-serif','color': '#f4eade','background-color':'transparent'})
+                }
+            })
+            function isEmail(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+            }
+        })
+    </script>
+</head>
+
 
 <body>
     <nav>
@@ -166,38 +207,39 @@
             </p>
             <br>
             <p><b>
-            <pre>
+                    <pre>
             Registered Office / Corporate Office
             Indian Railway Catering and Tourism Corporation Ltd.,
             B-148, 11th Floor, Statesman House,
             Barakhamba Road, New Delhi 110001
             </pre></b></p>
-    
+
             <h4>If you are not able to contct us , provide your deatails below we will contact you ASAP.</h4>
-    
+
             <div ng-app="">
-    
+
                 <p>Contact details:</p>
                 <form name="form">
-                    <p>Name : <input id="inp" type="text" ng-model="user.name" placeholder="Enter name here" ng-required>
+                    <p>Name : <input id="inp" class="name" type="text" ng-model="user.name"
+                            placeholder="Enter name here" ng-required>
                     </p>
-                    <p>Email : <input id="inp" type="email" ng-model="user.email" placeholder="Enter email here"
-                            ng-required></p>
+                    <p>Email : <input id="inp" type="text" class="mailid" ng-model="user.email"
+                            placeholder="Enter email here" ng-required></p>
                     <input id="btn" type="submit" value="Submit" />
                 </form>
-    
-                <h4>Thank you {{user.name}} for contacting us.</h4>
-    
+
+                <h4 class="message">Thank you {{user.name}} for contacting us.</h4>
+
             </div>
         </fieldset>
-    
+
     </div>
 
-    
+
 </body>
 <footer><br>
     <p>All Rights reserved by <br>Yuvaraj Javik Sumit <br><br>
-    <a href="ContactUs.html">Contact Us</a></p><br>
-  </footer>
+        <a href="ContactUs.html">Contact Us</a></p><br>
+</footer>
 
 </html>

@@ -168,11 +168,7 @@ footer a:hover{
     </nav>
     <div class="registration">
         <form action="./resource/search.php" method="post">
-            <fieldset class="f"><label id="l"> SEARCH TRAIN FOR RESERVATION</label> <br>
-                <p>
-                    <bold>Journey Type:</bold><input type="radio" name="journey" /> One way <input type="radio"
-                        value="Round Trip" name="journey" /> Round Trip
-                </p>
+            <fieldset class="f"><label id="l"> SEARCH TRAIN FOR RESERVATION</label>
                 <br>
                 <p> DEPARTURE CITY: <select id="#selected" name="departure">
                         <option id="#selected" selected="selected">--SELECT A LOCATION--</option>
@@ -210,17 +206,10 @@ footer a:hover{
                 </p>
                 <br>
 
-                <p>DEPARTURE DATE: <input type="date" name='DATE' /required></p>
+                <p>DEPARTURE DATE: <input type="date" name='DATE' required></p>
                 <br>
-                <div>
-                    <p> NUMBER OF TARVELLERS</p>
-                    <p> Adult(18 yrs+) <input type="number" min="1" max="10" required> Children(2-17 yrs) <input
-                            type="number" min="0" max="10" required> Infant(Below 2 yrs): <input type="number" min="0"
-                            max="10" required></p>
-
-                </div>
                 <br>
-                <p> <a href="./resource/search.php"><input type="submit" name="submit" id="btn" value="Search train" /></a><a
+                <p> <a href="./passenger.html"><input type="submit" name="submit" id="btn" value="Search train" /></a><a
                         href="index.html"><input id="btn" type="button" value="Cancel" /> </a></p>
 
             </fieldset>
