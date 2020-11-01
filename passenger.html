@@ -10,6 +10,8 @@
     <script>
         $(document).ready(function () {
             var allSet = true;
+            var adultCount = 0;
+            var childCount = 0;
             $('#addPassenger').click(function () {
                 const fname = $('#f_name').val();
                 const lname = $('#l_name').val();
@@ -44,7 +46,11 @@
                     <td>${phone}</td>
                     </tr>
                     
-                    `)
+                    `);
+                    if(age<18)  childCount += 1;
+                    else    adultCount += 1;
+                    $('.adultCount').html(`Adult : ${adultCount}`);
+                    $('.childCount').html(`Child : ${childCount}`);
                 }
             })
         });
@@ -253,7 +259,9 @@
 
     <div class="registration">
         <div class="f">
-            <h1 id="l"> ENTER PASSENGER DETAILS</h1> <br>
+            <h1 id="l"> ENTER PASSENGER DETAILS</h1>
+            <p><span class="adultCount">Adult : 0</span>
+                <span class="childCount">Child : 0</span></p>
             <form action="passengerDetails.php" method="post">
                 <p>First Name: <input class="inp" id="f_name" type="text" placeholder="FIRST NAME" name="FIRSTNAME"
                         required /></p><br>

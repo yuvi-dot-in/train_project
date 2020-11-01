@@ -167,10 +167,10 @@ footer a:hover{
         </ul>
     </nav>
     <div class="registration">
-        <form action="./resource/search.php" method="post">
+        <form method="post">
             <fieldset class="f"><label id="l"> SEARCH TRAIN FOR RESERVATION</label>
                 <br>
-                <p> DEPARTURE CITY: <select id="#selected" name="departure">
+                <p> DEPARTURE CITY: <select id="#selected" name="departure" required>
                         <option id="#selected" selected="selected">--SELECT A LOCATION--</option>
                         <option value="Bangalore">BLR,Bangalore Railway Station</option>
                         <option value="Chennai">MAA,Chennai Railway Station</option>
@@ -187,7 +187,7 @@ footer a:hover{
                         <option value="MANGALORE">MGL,Mangalore Railway Station</option>
                     </select></p>
                 <br>
-                <p> ARRIVAL CITY: <select name="arrival">
+                <p> ARRIVAL CITY: <select name="arrival" required>
                         <option id="#selected" selected="selected">--SELECT A LOCATION--</option>
                         <option value="Bangalore">BLR,Bangalore Railway Station</option>
                         <option value="Chennai">MAA,Chennai Railway Station</option>
@@ -209,7 +209,7 @@ footer a:hover{
                 <p>DEPARTURE DATE: <input type="date" name='DATE' required></p>
                 <br>
                 <br>
-                <p> <a href="./passenger.html"><input type="submit" name="submit" id="btn" value="Search train" /></a><a
+                <p> <a href="./passenger.html"><input type="button" name="submit" id="btn" value="Search train" /></a><a
                         href="index.html"><input id="btn" type="button" value="Cancel" /> </a></p>
 
             </fieldset>
